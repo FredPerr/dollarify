@@ -7,7 +7,7 @@
   "license": "UNLICENSED",
   "workspaces": [
       "./libs/*",
-      "./apps/*",
+      "./apps/*"
   ],
   "author": {
       "name": "Frédéric Perron",
@@ -35,6 +35,6 @@
   "keywords": [
       "financial tracker",
       "no-effort",
-      "prediction",
-  ],
+      "prediction"
+  ]
 }

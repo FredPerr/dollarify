@@ -1,0 +1,40 @@
+{
+  "name": "dollarify",
+  "version": "0.0.1",
+  "private": true,
+  "description": "The no-effort financial tracker that predicts your future accurately.",
+  "homepage": "https://dollarify.ca",
+  "license": "UNLICENSED",
+  "workspaces": [
+      "./libs/*",
+      "./apps/*",
+  ],
+  "author": {
+      "name": "Frédéric Perron",
+      "email": "frederic.perr@gmail.com",
+      "url": "https://fredericperron.ca"
+  },
+  "repository": {
+      "type": "git",
+      "url": "https://github.com/FredPerr/dollarify.git"
+  },
+  "bugs": {
+      "url": "https://github.com/FredPerr/dollarify/issues",
+      "email": "frederic.perr@gmail.com"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "engines": {
+      "node": ">=20",
+      "pnpm": ">=8"
+  },
+  "os": [
+      "linux"
+  ],
+  "keywords": [
+      "financial tracker",
+      "no-effort",
+      "prediction",
+  ],
+}

@@ -1,8 +1,15 @@
 # Testing
 
 
-- Unit testing: in packages/libraries in a file with the same name as the tested file using `*.spec` for it's name.
-- Integration testing*: in packages/libraries in a file with the same name as the tested file using `*.test` for it's name.
-- E2E testing: in the corresponding `[project name]-e2e` project with any of `*.spec` or `*.test` file.
+## Unit
+Jest is the test runner and will only run the `*.spec.ts` files in each package/library for the unit tests.
 
-*Integration testing may require the DB to be online, you may use Docker for that.*
+## Integration
+Integration tests are ran using Jest and only run the `*.test.ts` files in each package/library.
+
+Integration testing may require the use of Docker to spin up services such as a database.
+
+## End-to-end (E2E)
+E2E tests are stored as `.spec.ts` or `test.ts` files in the `tests/e2e/` folder at the root any package/library.
+
+E2E testing may required you to mock the external services such as a database.

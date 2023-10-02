@@ -1,0 +1,58 @@
+{
+    "affected": {
+        "defaultBase": "main"
+    },
+    "workspaceLayout": {
+        "projectNameAndRootFormat": "derived",
+        "appsDir": "apps",
+        "libsDir": "libs"
+    },
+    "tasksRunnerOptions": {
+        "default": {
+            "runner": "nx/tasks-runners/default",
+            "options": {
+                "cacheableOperations": ["build", "lint", "test"]
+            }
+        }
+    },
+    "generators": {
+        "@nx/js:library": {
+            "buildable": true
+        }
+    },
+    "namedInputs": {
+        "default": ["{projectRoot}/**/*"],
+        "production": [
+            "!{projectRoot}/**/?(*.)+(spec|test).[jt]s?(x)?(.snap)",
+            "!{projectRoot}/**/*.md",
+            "!{projectRoot}/tsconfig.spec.json",
+            "!{projectRoot}/jest.config.[jt]s",
+            "!{projectRoot}/.eslintrc.json"
+        ]
+    },
+    "targetDefaults": {
+        "build": {
+            "inputs": ["default", "production", "^production"],
+            "dependsOn": ["^build"],
+            "executor": "@nx/js:tsc",
+            "options": {}
+        },
+        "test": {
+            "inputs": ["default", "production", "^production"],
+            "dependsOn": ["^build"],
+            "executor": "@nx/jest:jest",
+            "options": {
+                "coverage": true,
+                "coverageDirectory": "{workspaceRoot}/coverage",
+                "coverageReporters": ["lcov", "json", "html"]
+            }
+        },
+        "lint": {
+            "inputs": [
+                "default",
+                "{workspaceRoot}/.eslintrc.json",
+                "{workspaceRoot}/.eslintignore"
+            ]
+        }
+    }
+}

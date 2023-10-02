@@ -1,0 +1,38 @@
+{
+    "$schema": "../../node_modules/nx/schemas/project-schema.json",
+    "name": "finances",
+    "sourceRoot": "libs/finances/src",
+    "root": "libs/finances",
+    "projectType": "library",
+    "targets": {
+        "lint": {
+            "executor": "@nx/linter:eslint",
+            "outputs": ["{options.outputFile}"],
+            "options": {
+                "lintFilePatterns": ["libs/finances/src/**/*.ts"],
+                "eslintConfig": ".eslintrc",
+                "fix": true
+            }
+        },
+        "build": {
+            "executor": "@nx/js:tsc",
+            "options": {}
+        },
+        "test": {
+            "executor": "@nx/jest:jest",
+            "outputs": ["{workspaceRoot}/coverage/finances"],
+            "options": {
+                "jestConfig": "libs/finances/jest.config.ts",
+                "coverage": true,
+                "coverageDirectory": "coverage/finances",
+                "coverageReporters": ["lcov", "json", "html"]
+            },
+            "configurations": {
+                "ci": {
+                    "ci": true,
+                    "codeCoverage": true
+                }
+            }
+        }
+    }
+}

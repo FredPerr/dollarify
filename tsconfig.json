@@ -1,8 +1,8 @@
 {
     "compilerOptions": {
         "incremental": true,
-        "target": "es2022",
-        "module": "esnext",
+        "target": "esnext",
+        "module": "nodenext",
         "declaration": true,
         "strict": true,
         "moduleResolution": "node",
@@ -15,7 +15,7 @@
         "experimentalDecorators": true,
         "importHelpers": true,
         "lib": [
-            "es2022"
+            "esnext"
         ],
         "outDir": "./build"
     },
@@ -24,7 +24,7 @@
     ],
     "references": [
         {
-            "path": "./libraries/finances"
+            "path": "./libs/finances"
         }
     ]
 }

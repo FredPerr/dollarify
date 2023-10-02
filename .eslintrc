@@ -1,0 +1,29 @@
+{
+    "root": true,
+    "parser": "@typescript-eslint/parser",
+    "plugins": ["@typescript-eslint"],
+    "extends": [
+        "eslint:recommended",
+        "plugin:@typescript-eslint/eslint-recommended",
+        "plugin:@typescript-eslint/recommended-type-checked",
+        "prettier"
+    ],
+    "files": ["**/*.ts", "**/*.tsx"],
+    "parserOptions": {
+        "ecmaFeatures": {
+            "jsx": true
+        },
+        "sourceType": "module",
+        "project": [
+            "./tsconfig.json",
+            "./apps/*/tsconfig.json",
+            "./libs/*/tsconfig.json"
+        ]
+    },
+    "overrides": [
+        {
+            "files": ["*.js"],
+            "extends": ["plugin:@typescript-eslint/disable-type-checked"]
+        }
+    ]
+}

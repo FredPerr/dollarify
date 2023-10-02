@@ -1,14 +1,16 @@
 {
     "root": true,
     "parser": "@typescript-eslint/parser",
-    "plugins": ["@typescript-eslint"],
+    "plugins": [
+        "@typescript-eslint"
+    ],
     "extends": [
         "eslint:recommended",
         "plugin:@typescript-eslint/eslint-recommended",
         "plugin:@typescript-eslint/recommended-type-checked",
         "prettier"
     ],
-    "files": ["**/*.ts", "**/*.tsx"],
+    //"files": ["**/*.ts", "**/*.tsx"],
     "parserOptions": {
         "ecmaFeatures": {
             "jsx": true
@@ -22,8 +24,23 @@
     },
     "overrides": [
         {
-            "files": ["*.js"],
-            "extends": ["plugin:@typescript-eslint/disable-type-checked"]
+            "files": [
+                "*.js"
+            ],
+            "extends": [
+                "plugin:@typescript-eslint/disable-type-checked"
+            ]
+        },
+        {
+            "files": [
+                "*.ts",
+                "*.tsx",
+                "*.js",
+                "*.jsx"
+            ],
+            "extends": [
+                "plugin:@typescript-eslint/recommended-type-checked"
+            ]
         }
     ]
 }

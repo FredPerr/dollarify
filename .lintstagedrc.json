@@ -1,4 +1,4 @@
 {
-    "*.{js,ts,tsx,jsx}": ["pnpm lint", "pnpm format:write"],
+    "*.{js,ts,tsx,jsx}": ["nx run-many -t lint", "pnpm format:write"],
     "*.{md,json}": ["pnpm format:write"]
 }

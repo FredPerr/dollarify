@@ -28,7 +28,7 @@
         "prepare": "husky install",
         "lint": "nx run-many -t lint",
         "build": "nx run-many -t build",
-        "test": "nx run-many -t test",
+        "test": "nx run-many -t test --bail",
         "clean:cache": "rm -rf ./node_modules/.cache/nx && echo 'Cleared Nx cache successfully!'",
         "clean:build": "nx run-many -t clean:build"
     },

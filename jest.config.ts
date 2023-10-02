@@ -1,9 +1,8 @@
 import type { Config } from 'jest'
 
 const defaultTransform = {
-    '^.+\\.ts?$': 'ts-jest'
+    '^.+\\.ts?$': 'ts-jest',
 }
-
 
 const config: Config = {
     verbose: true,
@@ -15,7 +14,7 @@ const config: Config = {
     coverageDirectory: '<rootDir>/coverage',
     collectCoverageFrom: [
         '<rootDir>/libs/**/src/**/*.ts',
-        '<rootDir>/apps/**/src/**/*.ts'
+        '<rootDir>/apps/**/src/**/*.ts',
         // '!<rootDir>/apps/**/src/**/index.ts'
     ],
     testPathIgnorePatterns: ['<rootDir>/node_modules'],
@@ -23,7 +22,7 @@ const config: Config = {
     coverageReporters: ['json', 'lcov', 'html'],
     projects: [
         {
-            displayName: "Finances Mathematics",
+            displayName: 'Finances Mathematics',
             testEnvironment: 'node',
             transform: defaultTransform,
             testMatch: [
@@ -33,9 +32,7 @@ const config: Config = {
             testPathIgnorePatterns: ['<rootDir>/libs/finances/src/dist'],
         },
         // Other projects here
-    ]
-
+    ],
 }
 
 export default config
-

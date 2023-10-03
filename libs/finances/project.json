@@ -10,13 +10,19 @@
             "outputs": ["{options.outputFile}"],
             "options": {
                 "lintFilePatterns": ["libs/finances/src/**/*.ts"],
-                "eslintConfig": ".eslintrc",
+                "eslintConfig": "libs/finances/.eslintrc.json",
                 "fix": true
             }
         },
         "build": {
             "executor": "@nx/js:tsc",
-            "options": {}
+            "outputs": ["{options.outputPath}"],
+            "options": {
+                "outputPath": "dist/libs/finances",
+                "main": "libs/finances/src/index.ts",
+                "tsConfig": "libs/finances/tsconfig.lib.json",
+                "assets": ["libs/finances/*.md"]
+            }
         },
         "test": {
             "executor": "@nx/jest:jest",

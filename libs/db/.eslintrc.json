@@ -3,9 +3,9 @@
     "ignorePatterns": ["!**/*"],
     "overrides": [
         {
-            "files": ["*.ts", "*js"],
+            "files": ["*.ts", "*.js"],
             "parserOptions": {
-                "project": ["libs/finances/tsconfig.*?.json"]
+                "project": ["libs/db/tsconfig.*?.json"]
             },
             "rules": {}
         }

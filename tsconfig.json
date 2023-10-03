@@ -15,7 +15,10 @@
         "experimentalDecorators": true,
         "importHelpers": true,
         "lib": ["esnext"],
-        "outDir": "./build"
+        "outDir": "./build",
+        "paths": {
+            "db": ["libs/db/src/index.ts"]
+        }
     },
     "exclude": ["node_modules"],
     "references": [

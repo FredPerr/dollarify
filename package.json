@@ -29,6 +29,7 @@
         "lint": "nx run-many -t lint",
         "build": "nx run-many -t build",
         "test": "nx run-many -t test --bail",
+        "test:nocache": "nx run-many -t test --bail --skip-nx-cache",
         "clean:cache": "rm -rf ./node_modules/.cache/nx && echo 'Cleared Nx cache successfully!'"
     },
     "engines": {

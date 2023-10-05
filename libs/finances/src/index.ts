@@ -1,3 +1,2 @@
-export function printHelloWorld() {
-    return 'Hello, World!'
-}
+export * from './compound_interest'
+export * from './annuities'

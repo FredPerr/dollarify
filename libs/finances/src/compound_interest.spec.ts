@@ -4,7 +4,7 @@ import {
     principal_compound_interest,
     rate_per_period_compound_interest,
     periods_compound_interest,
-} from './compound'
+} from './compound_interest'
 
 describe('Compounding interest formula', () => {
     const t1 = {

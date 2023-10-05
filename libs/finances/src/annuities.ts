@@ -2,10 +2,10 @@
  * Future value of ordinary annuity
  * @see https://www.investopedia.com/retirement/calculating-present-and-future-value-of-annuities/
  *
- * @param pmt - payment amount per period (equivalent to cash flow per period).
- * @param interest - annual interest rate.
- * @param nper_per_year - number of periods per year (bi-annually = 2).
- * @param nper - number of payments/periods.
+ * @param pmt payment amount per period (equivalent to cash flow per period).
+ * @param interest annual interest rate.
+ * @param nper_per_year number of periods per year (bi-annually = 2).
+ * @param nper number of payments/periods.
  * @returns final total of the payments with interests.
  */
 function fv_ordinary_annuity(
@@ -22,10 +22,9 @@ function fv_ordinary_annuity(
  * Present value of ordinary annuity
  * @see https://www.investopedia.com/retirement/calculating-present-and-future-value-of-annuities/
  *
- * @param pmt - payment amount per period (equivalent to cash flow per period).
- * @param interest - annual interest rate.
- * @param nper_per_year - number of periods per year (bi-annually = 2).
- * @param nper - number of payments/periods.
+ * @param pmt payment amount per period (equivalent to cash flow per period).
+ * @param nper_per_year number of periods per year (bi-annually = 2).
+ * @param nper number of payments/periods.
  * @returns initial value required to  of the payments with interests.
  */
 function pv_ordinary_annuity(
@@ -44,11 +43,11 @@ function pv_ordinary_annuity(
  * Future value of due annuity
  * @see https://www.investopedia.com/retirement/calculating-present-and-future-value-of-annuities/
  *
- * @param pmt - payment amount per period (equivalent to cash flow per period).
+ * @param pmt  - payment amount per period (equivalent to cash flow per period).
  * @param interest - annual interest rate.
- * @param nper_per_year - number of periods per year (bi-annually = 2).
+ *  @param nper_per_year -  number of periods per year (bi-annually = 2).
  * @param nper - number of payments/periods.
- * @returns final total of the payments with interests.
+ *  @returns final total of the payments with interests.
  */
 function fv_due_annuity(
     pmt: number,
@@ -66,8 +65,8 @@ function fv_due_annuity(
 
 /**
  * Present value of due annuity
- * @see https://www.investopedia.com/retirement/calculating-present-and-future-value-of-annuities/
- *
+ *  @see https://www.investopedia.com/retirement/calculating-present-and-future-value-of-annuities/
+
  * @param pmt - payment amount per period (equivalent to cash flow per period).
  * @param interest - annual interest rate.
  * @param nper_per_year - number of periods per year (bi-annually = 2).
